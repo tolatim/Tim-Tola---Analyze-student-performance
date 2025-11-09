@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Peformance</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Student-Peformance</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="./index.html">Month</a>
+            <a href="./term.html">Term</a>
+            <a href="#">Year</a>
+            <a href="./student.html">Student</a>
+        </div>
+    </nav>
+    <main>
+        <div class="seaction1">
+            <h1>Welcome To Students Peformance SYSTEM </h1>
+            <P style="color: brown;">NOW YOU ARE IN Year</P>
+            <div class="store">
+                <button id="year1-btn">Year 1</button>
+                <button id="year2-btn">Year 2</button>
+            </div>
+            <p id="message" style="color: red;"></p>
+            <div class="form-term" id="year1" style="display: none;">
+                <button class="btn-back" id="back-year1" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="year2" style="display: none;">
+                <button class="btn-back" id="back-year2" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+        </div>
+        <div class="seaction2">
+            <h1>Student Lists</h1>
+            <p>THIS SEACTION WILL SHOW YOU ABOUT YOUR DATA</p>
+            <div class="display" id="year1-display" style="display: none;">
+                <h1>Year 1</h1>
+                <div class="right-section">
+                    <div class="student-list">
+                        <div>
+                            <h2 style="color: #004aad;">List Of Student</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>View Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="display-studentlist1"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h2>Performance Summary</h2>
+                        <div class="info-item">
+                            <span>Id:</span>
+                            <p id="id-year1"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Name:</span>
+                            <p id="name-year1"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average Term:</span>
+                            <p id="term-year1"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average Month:</span>
+                            <p id="month-year1"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average:</span>
+                            <p id="avg-year1"></p>
+                        </div>
+                        <div class="info-item result">
+                            <span>Result:</span>
+                            <p id="result-year1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display" id="year2-display" style="display: none;">
+                <h1>Year 2</h1>
+                <div class="right-section">
+                    <div class="student-list">
+                        <div>
+                            <h2 style="color: #004aad;">List Of Student</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Grade</th>
+                                        <th>View Result</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="display-studentlist2"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h2>Performance Summary</h2>
+                        <div class="info-item">
+                            <span>Id:</span>
+                            <p id="id-year2"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Name:</span>
+                            <p id="name-year2"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average Term:</span>
+                            <p id="term-year2"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average Month:</span>
+                            <p id="month-year2"></p>
+                        </div>
+                        <div class="info-item">
+                            <span>Average:</span>
+                            <p id="avg-year2"></p>
+                        </div>
+                        <div class="info-item result">
+                            <span>Result:</span>
+                            <p id="result-year2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Students Performance <span>System</span></h2>
+                <p>Empowering students through data-driven insights and performance tracking.</p>
+            </div>
+            <div class="footer-center">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Month</a></li>
+                    <li><a href="#">Year</a></li>
+                    <li><a href="#">Term</a></li>
+                    <li><a href="#">Student</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:support@studentsystem.com">support@studentsystem.com</a></p>
+                <p>Phone: +855 123 456 789</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Students Performance System. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/users/year.js"></script>
+</body>
+
+</html>

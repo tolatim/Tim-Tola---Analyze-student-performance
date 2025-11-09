@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #002244;
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #002b7a, #004e9a);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* ================= MAIN LAYOUT ================= */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px 80px;
+}
+
+/* ================= SECTION 1 ================= */
+.seaction1 {
+  background: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 18px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.seaction1:hover {
+  transform: translateY(-3px);
+}
+
+.seaction1 h1 {
+  color: #001e60;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seaction1 p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Month Buttons */
+.store {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.store button {
+  background: #004e9a;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.store button:hover {
+  background: #0073e6;
+  transform: translateY(-2px);
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.form-month, .form-term {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-month button {
+  width: 200px;
+}
+
+form input:focus {
+  border-color: #004e9a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 78, 154, 0.3);
+}
+
+form button {
+  background: #004e9a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #006ad4;
+}
+
+.btn-back {
+  margin-top: 15px;
+  background: #888;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: #555;
+}
+
+/* ================= SECTION 2 (STUDENT LIST) ================= */
+.seaction2 {
+  background: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 18px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+}
+
+.seaction2 h1 {
+  text-align: center;
+  color: #001e60;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.seaction2 p {
+  text-align: center;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.seaction2 h1:not(:first-of-type) {
+  color: #004e9a;
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+/* Table Design */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+th {
+  background: #004e9a;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f8faff;
+}
+
+tr:hover {
+  background: #eef5ff;
+}
+
+/* Action Buttons */
+.seaction2 button {
+  background: #004e9a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0 2px;
+  transition: 0.2s;
+}
+
+.seaction2 button:hover {
+  background: #006ad4;
+}
+
+.seaction2 button {
+  background: #c62828;
+}
+
+.seaction2 button:hover {
+  background: #e53935;
+}
+
+#Pass {
+  background-color: blue;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .seaction1, .seaction2 {
+    padding: 25px 20px;
+  }
+  .store {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}

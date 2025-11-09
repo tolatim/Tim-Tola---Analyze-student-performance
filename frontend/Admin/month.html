@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Admin-System</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="./index.html">Student Insert</a>
+            <a href="#">Month</a>
+            <a href="./term.html">Term</a>
+        </div>
+    </nav>
+    <main>
+        <div class="seaction1">
+            <h1>Welcome To Students Peformance SYSTEM </h1>
+            <P style="color: brown;">NOW YOU ARE IN MONTH</P>
+            <p>SELECT YOUR MONTH TO INSERT STUDENT SYSTEM WILL ANALYZE YOUR DATA</p>
+            <div class="store">
+                <button id="jan">January</button>
+                <button id="feb">February</button>
+                <button id="ma">March</button>
+                <button id="ap">April</button>
+                <button id="may">May</button>
+                <button id="jun">June</button>
+                <button id="july">July</button>
+                <button id="au">August</button>
+                <button id="se">September</button>
+                <button id="oc">October</button>
+                <button id="no">November</button>
+                <button id="de">December</button>
+            </div>
+            <p id="message" style="color: red;"></p>
+            <div class="form-month" id="January" style="display: none;">
+                <h1>January</h1>
+                <form id="form-jan" action="">
+                    <input id="id-jan" type="text" placeholder="Id">
+                    <input id="name-jan" type="text" placeholder="Name">
+                    <input id="homework-jan" type="text" placeholder="Homework">
+                    <input id="quize-jan" type="text" placeholder="Quize">
+                    <input id="soft-skill-jan" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-jan" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="February" style="display: none;">
+                <h1>February</h1>
+                <form id="form-feb" action="">
+                    <input id="id-feb" type="text" placeholder="Id">
+                    <input id="name-feb" type="text" placeholder="Name">
+                    <input id="homework-feb" type="text" placeholder="Homework">
+                    <input id="quize-feb" type="text" placeholder="Quize">
+                    <input id="soft-skill-feb" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-feb" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="March" style="display: none;">
+                <h1>March</h1>
+                <form id="form-ma" action="">
+                    <input id="id-ma" type="text" placeholder="Id">
+                    <input id="name-ma" type="text" placeholder="Name">
+                    <input id="homework-ma" type="text" placeholder="Homework">
+                    <input id="quize-ma" type="text" placeholder="Quize">
+                    <input id="soft-skill-ma" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-ma" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="April" style="display: none;">
+                <h1>April</h1>
+                <form id="form-ap" action="">
+                    <input id="id-ap" type="text" placeholder="Id">
+                    <input id="name-ap" type="text" placeholder="Name">
+                    <input id="homework-ap" type="text" placeholder="Homework">
+                    <input id="quize-ap" type="text" placeholder="Quize">
+                    <input id="soft-skill-ap" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-ap" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="May" style="display: none;">
+                <h1>May</h1>
+                <form id="form-may" action="">
+                    <input id="id-may" type="text" placeholder="Id">
+                    <input id="name-may" type="text" placeholder="Name">
+                    <input id="homework-may" type="text" placeholder="Homework">
+                    <input id="quize-may" type="text" placeholder="Quize">
+                    <input id="soft-skill-may" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-may" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="June" style="display: none;">
+                <h1>June</h1>
+                <form id="form-jun" action="">
+                    <input id="id-jun" type="text" placeholder="Id">
+                    <input id="name-jun" type="text" placeholder="Name">
+                    <input id="homework-jun" type="text" placeholder="Homework">
+                    <input id="quize-jun" type="text" placeholder="Quize">
+                    <input id="soft-skill-jun" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-jun" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="July" style="display: none;">
+                <h1>July</h1>
+                <form id="form-july" action="">
+                    <input id="id-july" type="text" placeholder="Id">
+                    <input id="name-july" type="text" placeholder="Name">
+                    <input id="homework-july" type="text" placeholder="Homework">
+                    <input id="quize-july" type="text" placeholder="Quize">
+                    <input id="soft-skill-july" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-july" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="August" style="display: none;">
+                <h1>August</h1>
+                <form id="form-au" action="">
+                    <input id="id-au" type="text" placeholder="Id">
+                    <input id="name-au" type="text" placeholder="Name">
+                    <input id="homework-au" type="text" placeholder="Homework">
+                    <input id="quize-au" type="text" placeholder="Quize">
+                    <input id="soft-skill-au" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-au" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="September" style="display: none;">
+                <h1>September</h1>
+                <form id="form-se" action="">
+                    <input id="id-se" type="text" placeholder="Id">
+                    <input id="name-se" type="text" placeholder="Name">
+                    <input id="homework-se" type="text" placeholder="Homework">
+                    <input id="quize-se" type="text" placeholder="Quize">
+                    <input id="soft-skill-se" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-se" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="October" style="display: none;">
+                <h1>October</h1>
+                <form id="form-oc" action="">
+                    <input id="id-oc" type="text" placeholder="Id">
+                    <input id="name-oc" type="text" placeholder="Name">
+                    <input id="homework-oc" type="text" placeholder="Homework">
+                    <input id="quize-oc" type="text" placeholder="Quize">
+                    <input id="soft-skill-oc" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-oc" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="November" style="display: none;">
+                <h1>November</h1>
+                <form id="form-no" action="">
+                    <input id="id-no" type="text" placeholder="Id">
+                    <input id="name-no" type="text" placeholder="Name">
+                    <input id="homework-no" type="text" placeholder="Homework">
+                    <input id="quize-no" type="text" placeholder="Quize">
+                    <input id="soft-skill-no" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-no" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="December" style="display: none;">
+                <h1>December</h1>
+                <form id="form-de" action="">
+                    <input id="id-de" type="text" placeholder="Id">
+                    <input id="name-de" type="text" placeholder="Name">
+                    <input id="homework-de" type="text" placeholder="Homework">
+                    <input id="quize-de" type="text" placeholder="Quize">
+                    <input id="soft-skill-de" type="text" placeholder="Soft Skill">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+
+                </form>
+                <button class="btn-back" id="back-de" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+        </div>
+        <div class="seaction2">
+            <h1>Student Lists</h1>
+            <p>THIS SEACTION WILL SHOW YOU ABOUT YOUR DATA</p>
+            <div class="display" id="January-display" style="display: none;">
+                <h1>January</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="january-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="February-display" style="display: none;">
+                <h1>February</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="february-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="March-display" style="display: none;">
+                <h1>March</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="march-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="April-display" style="display: none;">
+                <h1>April</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="april-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="May-display" style="display: none;">
+                <h1>May</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="may-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="June-display" style="display: none;">
+                <h1>June</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="june-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="July-display" style="display: none;">
+                <h1>July</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="july-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="August-display" style="display: none;">
+                <h1>August</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="august-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="September-display" style="display: none;">
+                <h1>September</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="september-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="October-display" style="display: none;">
+                <h1>October</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="october-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="November-display" style="display: none;">
+                <h1>November</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="november-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="December-display" style="display: none;">
+                <h1>December</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="december-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../js/admin/month.js"></script>
+</body>
+
+</html>

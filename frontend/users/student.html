@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Peformance</title>
+    <style>
+        /* ====== Reset and Base ====== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #f5f8ff;
+            color: #333;
+        }
+
+        main {
+            padding: 2em 5em;
+            display: flex;
+            gap: 24px;
+        }
+
+        /* ====== Navbar ====== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #002b7a, #004e9a);
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        /* ====== Layout ====== */
+        body>div {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 30px 40px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* ====== Left Section (Student Table) ====== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        thead {
+            background: #004aad;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f6ff;
+        }
+
+        tr:hover {
+            background: #e8f0ff;
+            transition: 0.3s;
+        }
+
+        /* ====== Action Buttons ====== */
+        button,
+        .btn-view {
+            background: #004aad;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #007bff;
+            transform: translateY(-2px);
+        }
+
+        /* ====== Right Section (Charts) ====== */
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            flex: 1;
+            min-width: 400px;
+        }
+
+        .chart-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .chart-card h2 {
+            color: #004aad;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        canvas {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            padding: 10px;
+        }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 960px) {
+            body>div {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .right-section {
+                width: 100%;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            main {
+                flex-wrap: wrap;
+                padding: 1em;
+            }
+        }
+
+        .info-card {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            color: #002b5b;
+            font-family: 'Poppins', sans-serif;
+            min-width: 280px;
+        }
+
+        .info-card h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .info-item span {
+            font-weight: 600;
+            color: #004080;
+        }
+
+        .info-item p {
+            margin: 0;
+            font-weight: 500;
+            color: #003366;
+        }
+
+        .info-item.result p {
+            color: #007b3e;
+            font-weight: bold;
+        }
+
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #002b7a, #0050c8);
+            color: #fff;
+            padding-top: 40px;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 60px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px 30px;
+            gap: 20px;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1;
+            min-width: 250px;
+            margin: 15px;
+        }
+
+        .footer-left h2 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .footer-left h2 span {
+            color: #ffcc00;
+        }
+
+        .footer-left p {
+            margin-top: 8px;
+            opacity: 0.85;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-center h3,
+        .footer-right h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #ffcc00;
+        }
+
+        .footer-center ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-center ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-center ul li a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+
+        .footer-center ul li a:hover {
+            color: #ffcc00;
+            opacity: 1;
+        }
+
+        .footer-right a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .footer-right .socials {
+            margin-top: 10px;
+        }
+
+        .footer-right .socials a {
+            color: white;
+            margin-right: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-right .socials a:hover {
+            color: #ffcc00;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 15px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* 🌐 Responsive Design */
+        @media (max-width: 1024px) {
+            .info-card h2 {
+                font-size: 1.2rem;
+            }
+
+            .info-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .footer-container {
+                padding: 0 15px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-left,
+            .footer-center,
+            .footer-right {
+                margin: 10px 0;
+                min-width: 100%;
+            }
+
+            .footer-right .socials a {
+                font-size: 18px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-item span {
+                font-size: 14px;
+            }
+
+            .info-item p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-card h2 {
+                font-size: 1rem;
+            }
+
+            .footer-left h2 {
+                font-size: 18px;
+            }
+
+            .footer-center h3,
+            .footer-right h3 {
+                font-size: 16px;
+            }
+
+            .footer-bottom {
+                font-size: 12px;
+            }
+
+            .footer-right .socials a {
+                font-size: 16px;
+                margin-right: 6px;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Student-Peformance</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="./index.html">Month</a>
+            <a href="./term.html">Term</a>
+            <a href="./year.html">Year</a>
+            <a href="#">Student</a>
+        </div>
+    </nav>
+    <main>
+        <div class="right-section">
+            <h2 style="color: #004aad;">List Of Student</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Grade</th>
+                        <th>Joined</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="display-studentlist"></tbody>
+            </table>
+        </div>
+        <div style="display: flex; flex-direction: column;gap: 28px;">
+            <h2 style="color: #004aad;">Average Score Of Student</h2>
+            <div class="chart-card">
+                <div class="info-card">
+                    <h2>Performance Summary</h2>
+                    <div class="info-item">
+                        <span>Id:</span>
+                        <p id="id"></p>
+                    </div>
+                    <div class="info-item">
+                        <span>Name:</span>
+                        <p id="name"></p>
+                    </div>
+                    <div class="info-item">
+                        <span>Average:</span>
+                        <p id="avg"></p>
+                    </div>
+                    <div class="info-item">
+                        <span>Result:</span>
+                        <p id="result3"></p>
+                    </div>
+                </div>
+                <h2>Month</h2>
+                <p>Student Average Score In Months</p>
+                <canvas id="scoreChart" width="500" height="200"></canvas>
+                <h2>Term</h2>
+                <p>Student Average Score In Term</p>
+                <canvas id="scoreChart-term" width="500" height="200"></canvas>
+                <h2>Year</h2>
+                <p>Student Average Score In Year</p>
+                <canvas id="scoreChart-year" width="500" height="200"></canvas>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Students Performance <span>System</span></h2>
+                <p>Empowering students through data-driven insights and performance tracking.</p>
+            </div>
+
+            <div class="footer-center">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Month</a></li>
+                    <li><a href="#">Year</a></li>
+                    <li><a href="#">Term</a></li>
+                    <li><a href="#">Student</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:support@studentsystem.com">support@studentsystem.com</a></p>
+                <p>Phone: +855 123 456 789</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Students Performance System. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/users/student.js"></script>
+</body>
+
+</html>

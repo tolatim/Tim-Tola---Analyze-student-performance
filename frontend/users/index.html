@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Peformance</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Student-Peformance</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="#">Month</a>
+            <a href="./term.html">Term</a>  
+            <a href="./year.html">Year</a>
+            <a href="./student.html">Student</a>
+        </div>
+    </nav>
+    <main>
+        <div class="seaction1">
+            <h1>Welcome to Student Peformance</h1>
+            <P style="color: brown;">NOW YOU ARE IN MONTH</P>
+            <div class="store">
+                <button id="jan">January</button>
+                <button id="feb">February</button>
+                <button id="ma">March</button>
+                <button id="ap">April</button>
+                <button id="may">May</button>
+                <button id="jun">June</button>
+                <button id="july">July</button>
+                <button id="au">August</button>
+                <button id="se">September</button>
+                <button id="oc">October</button>
+                <button id="no">November</button>
+                <button id="de">December</button>
+            </div>
+            <p id="message" style="color: red;"></p>
+            <div class="form-month" id="January" style="display: none;">
+                <button class="btn-back" id="back-jan" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="February" style="display: none;">
+                <button class="btn-back" id="back-feb" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="March" style="display: none;">
+                <button class="btn-back" id="back-ma" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="April" style="display: none;">
+                <button class="btn-back" id="back-ap" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="May" style="display: none;">
+                <button class="btn-back" id="back-may" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="June" style="display: none;">
+                <button class="btn-back" id="back-jun" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="July" style="display: none;">
+                <button class="btn-back" id="back-july" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="August" style="display: none;">
+                <button class="btn-back" id="back-au" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="September" style="display: none;">
+                <button class="btn-back" id="back-se" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="October" style="display: none;">
+                <button class="btn-back" id="back-oc" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="November" style="display: none;">
+                <button class="btn-back" id="back-no" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-month" id="December" style="display: none;">
+                <button class="btn-back" id="back-de" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+        </div>
+        <div class="seaction2">
+            <h1>Student Lists</h1>
+            <p>THIS SEACTION WILL SHOW YOU ABOUT YOUR DATA</p>
+            <div class="display" id="January-display" style="display: none;">
+                <h3>January</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="january-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="February-display" style="display: none;">
+                <h3>February</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="february-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="March-display" style="display: none;">
+                <h1>March</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="march-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="April-display" style="display: none;">
+                <h1>April</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="april-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="May-display" style="display: none;">
+                <h1>May</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="may-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="June-display" style="display: none;">
+                <h1>June</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="june-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="July-display" style="display: none;">
+                <h1>July</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="july-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="August-display" style="display: none;">
+                <h1>August</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="august-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="September-display" style="display: none;">
+                <h1>September</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="september-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="October-display" style="display: none;">
+                <h1>October</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="october-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="November-display" style="display: none;">
+                <h1>November</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="november-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="December-display" style="display: none;">
+                <h1>December</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Homework</th>
+                            <th>Quize</th>
+                            <th>Soft Skill</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="december-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!--  -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Students Performance <span>System</span></h2>
+                <p>Empowering students through data-driven insights and performance tracking.</p>
+            </div>
+
+            <div class="footer-center">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Month</a></li>
+                    <li><a href="#">Year</a></li>
+                    <li><a href="#">Term</a></li>
+                    <li><a href="#">Student</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:support@studentsystem.com">support@studentsystem.com</a></p>
+                <p>Phone: +855 123 456 789</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Students Performance System. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/users/main.js"></script>
+</body>
+
+</html>

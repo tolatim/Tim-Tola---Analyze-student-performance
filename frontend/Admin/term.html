@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Admin-System</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="./index.html">Student Insert</a>
+            <a href="./month.html">Month</a>
+            <a href="#">Term</a>
+        </div>
+    </nav>
+    <main>
+        <div class="seaction1">
+            <h1>Welcome To Students Peformance SYSTEM </h1>
+            <P style="color: brown;">NOW YOU ARE IN TERM</P>
+            <p>SELECT YOUR TERM TO INSERT STUDENT SYSTEM WILL ANALYZE YOUR DATA</p>
+            <div class="store">
+                <button id="term1-btn">Term 1</button>
+                <button id="term2-btn">Term 2</button>
+                <button id="term3-btn">Term 3</button>
+                <button id="term4-btn">Term 4</button>
+            </div>
+            <p id="message" style="color: red;"></p>
+            <div class="form-term" id="term1" style="display: none;">
+                <h1>Term1</h1>
+                <form id="form-term1" action="">
+                    <input id="id-term1" type="number" placeholder="Id">
+                    <input id="name-term1" type="text" placeholder="Name">
+                    <input id="logic-term1" type="number" placeholder="Logic">
+                    <input id="bcu-term1" type="number" placeholder="BCU">
+                    <input id="ms-term1" type="number" placeholder="MS Office">
+                    <input id="ui-term1" type="number" placeholder="UI Design">
+                    <input id="typing-term1" type="number" placeholder="Typing">
+                    <input id="english-term1" type="number" placeholder="English">
+                    <input id="pro-term1" type="number" placeholder="Professional Life">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-term1" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term2" style="display: none;">
+                <h1>Term2</h1>
+                <form id="form-term2" action="">
+                    <input id="id-term2" type="number" placeholder="Id">
+                    <input id="name-term2" type="text" placeholder="Name">
+                    <input id="algorithm-term2" type="number" placeholder="Algorithm">
+                    <input id="web-term2" type="number" placeholder="Web Design">
+                    <input id="git-term2" type="number" placeholder="Git">
+                    <input id="english-term2" type="number" placeholder="English">
+                    <input id="pro-term2" type="number" placeholder="Professional Life">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-term2" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term3" style="display: none;">
+                <h1>Term3</h1>
+                <form id="form-term3" action="">
+                    <input id="id-term3" type="number" placeholder="Id">
+                    <input id="name-term3" type="text" placeholder="Name">
+                    <input id="software-term3" type="number" placeholder="Software Deplyment">
+                    <input id="js-term3" type="number" placeholder="JavaScript">
+                    <input id="php-term3" type="number" placeholder="PHP">
+                    <input id="db-term3" type="number" placeholder="Database">
+                    <input id="git-term3" type="number" placeholder="Git">
+                    <input id="pm-term3" type="number" placeholder="Project Management">
+                    <input id="node-term3" type="number" placeholder="Node Js">
+                    <input id="oop-term3" type="number" placeholder="OOP Introdution">
+                    <input id="english-term3" type="number" placeholder="English">
+                    <input id="pro-term3" type="number" placeholder="Professional Life">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-term3" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term4" style="display: none;">
+                <h1>Term4</h1>
+                <form id="form-term4" action="">
+                    <input id="id-term4" type="number" placeholder="Id">
+                    <input id="name-term4" type="text" placeholder="Name">
+                    <input id="oop-term4" type="number" placeholder="OOP">
+                    <input id="laravel-term4" type="number" placeholder="Laravel">
+                    <input id="vue-term4" type="number" placeholder="Vue JS">
+                    <input id="english-term4" type="number" placeholder="English">
+                    <input id="pro-term4" type="number" placeholder="Professional Life">
+                    <button type="submit" style="height: 40px; border-radius: 4px;">Submit</button>
+                </form>
+                <button class="btn-back" id="back-term4" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+        </div>
+        <div class="seaction2">
+            <h1>Student Lists</h1>
+            <p>THIS SEACTION WILL SHOW YOU ABOUT YOUR DATA</p>
+            <div class="display" id="term1-display" style="display: none;">
+                <h1>Term1</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Logic</th>
+                            <th>BCU</th>
+                            <th>MS Office</th>
+                            <th>UI Design</th>
+                            <th>Typing</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term1-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term2-display" style="display: none;">
+                <h1>Term2</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Algorithm</th>
+                            <th>Web Design</th>
+                            <th>Git</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term2-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term3-display" style="display: none;">
+                <h1>Term3</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>S D</th>
+                            <th>Js</th>
+                            <th>PHP</th>
+                            <th>DB</th>
+                            <th>Git</th>
+                            <th>Project Management</th>
+                            <th>Node Js</th>
+                            <th>OOP</th>
+                            <th>English</th>
+                            <th>PL</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term3-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term4-display" style="display: none;">
+                <h1>Term4</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Oop</th>
+                            <th>Laravel</th>
+                            <th>Vue Js</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term4-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../js/admin/term.js"></script>
+</body>
+
+</html>

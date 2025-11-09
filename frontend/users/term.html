@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Peformance</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>Student-Peformance</h1>
+        <div style="display: flex; gap: 24px;">
+            <a href="./index.html">Month</a>
+            <a href="#">Term</a>
+            <a href="./year.html">Year</a>
+            <a href="./student.html">Student</a>
+        </div>
+    </nav>
+    <main>
+        <div class="seaction1">
+            <h1>Welcome To Students Peformance SYSTEM </h1>
+            <P style="color: brown;">NOW YOU ARE IN TERM</P>
+            <p>SELECT YOUR TERM TO INSERT STUDENT SYSTEM WILL ANALYZE YOUR DATA</p>
+            <div class="store">
+                <button id="term1-btn">Term 1</button>
+                <button id="term2-btn">Term 2</button>
+                <button id="term3-btn">Term 3</button>
+                <button id="term4-btn">Term 4</button>
+            </div>
+            <p id="message" style="color: red;"></p>
+            <div class="form-term" id="term1" style="display: none;">
+                <button class="btn-back" id="back-term1" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term2" style="display: none;">
+                <button class="btn-back" id="back-term2" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term3" style="display: none;">
+                <button class="btn-back" id="back-term3" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+            <div class="form-term" id="term4" style="display: none;">
+                <button class="btn-back" id="back-term4" style="height: 40px; border-radius: 4px;">Back</button>
+            </div>
+        </div>
+        <div class="seaction2">
+            <h1>Student Lists</h1>
+            <p>THIS SEACTION WILL SHOW YOU ABOUT YOUR DATA</p>
+            <div class="display" id="term1-display" style="display: none;">
+                <h1>Term1</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Logic</th>
+                            <th>BCU</th>
+                            <th>MS Office</th>
+                            <th>UI Design</th>
+                            <th>Typing</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term1-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term2-display" style="display: none;">
+                <h1>Term2</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Algorithm</th>
+                            <th>Web Design</th>
+                            <th>Git</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term2-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term3-display" style="display: none;">
+                <h1>Term3</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>S D</th>
+                            <th>Js</th>
+                            <th>PHP</th>
+                            <th>DB</th>
+                            <th>Git</th>
+                            <th>Project Management</th>
+                            <th>Node Js</th>
+                            <th>OOP</th>
+                            <th>English</th>
+                            <th>PL</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term3-table"></tbody>
+                </table>
+            </div>
+            <div class="display" id="term4-display" style="display: none;">
+                <h1>Term4</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Oop</th>
+                            <th>Laravel</th>
+                            <th>Vue Js</th>
+                            <th>English</th>
+                            <th>Professional Life</th>
+                            <th>Average</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="term4-table"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Students Performance <span>System</span></h2>
+                <p>Empowering students through data-driven insights and performance tracking.</p>
+            </div>
+
+            <div class="footer-center">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Month</a></li>
+                    <li><a href="#">Year</a></li>
+                    <li><a href="#">Term</a></li>
+                    <li><a href="#">Student</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:support@studentsystem.com">support@studentsystem.com</a></p>
+                <p>Phone: +855 123 456 789</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Students Performance System. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/users/term.js"></script>
+</body>
+
+</html>

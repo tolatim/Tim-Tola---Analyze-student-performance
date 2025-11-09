@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #002244;
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #002b7a, #004e9a);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .navbar a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+
+/* ================= MAIN LAYOUT ================= */
+/* main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px 80px;
+} */
+
+/* Main container */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 2em 5vw;
+}
+/* Left: Form Section */
+.form-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right: List Section */
+.list-container {
+  flex: 1.3;
+  min-width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 500px;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #f1f8ff;
+}
+
+#display-studentlist button {
+  width: 60px;
+  height: 30px;
+  background-color: rgb(229, 67, 67);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ================= SECTION 1 ================= */
+.seaction1 {
+  background: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 18px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.seaction1:hover {
+  transform: translateY(-3px);
+}
+
+.seaction1 h1 {
+  color: #001e60;
+  font-size: 1.9rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seaction1 p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Month Buttons */
+.store {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.store button {
+  background: #004e9a;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.store button:hover {
+  background: #0073e6;
+  transform: translateY(-2px);
+}
+
+/* Form Styling */
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.form-month,
+.form-term {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-month button {
+  width: 200px;
+}
+
+form input:focus {
+  border-color: #004e9a;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 78, 154, 0.3);
+}
+
+form button {
+  background: #004e9a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #006ad4;
+}
+
+.btn-back {
+  margin-top: 15px;
+  background: #888;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: #555;
+}
+
+/* ================= SECTION 2 (STUDENT LIST) ================= */
+.seaction2 {
+  background: #ffffff;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 18px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+}
+
+.seaction2 h1 {
+  text-align: center;
+  color: #001e60;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.seaction2 p {
+  text-align: center;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.seaction2 h1:not(:first-of-type) {
+  color: #004e9a;
+  font-size: 1.4rem;
+  margin-top: 25px;
+}
+
+/* Table Design */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+th {
+  background: #004e9a;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f8faff;
+}
+
+tr:hover {
+  background: #eef5ff;
+}
+
+/* Action Buttons */
+.seaction2 button {
+  background: #004e9a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin: 0 2px;
+  transition: 0.2s;
+}
+
+.seaction2 button:hover {
+  background: #006ad4;
+}
+
+.seaction2 button {
+  background: #c62828;
+}
+
+.seaction2 button:hover {
+  background: #e53935;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .seaction1,
+  .seaction2 {
+    padding: 25px 20px;
+  }
+
+  .store {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*  */
+.right-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.student-list {
+  flex: 2;
+}
+
+.info-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  color: #002b5b;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-card h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.info-item span {
+  font-weight: 600;
+  color: #004080;
+}
+
+.info-item p {
+  margin: 0;
+  font-weight: 500;
+  color: #003366;
+}
+
+.info-item.result p {
+  color: #007b3e;
+  font-weight: bold;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+.footer {
+  background: linear-gradient(135deg, #002b7a, #0050c8);
+  color: #fff;
+  padding-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 30px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+}
+
+.footer-left h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-left h2 span {
+  color: #ffcc00;
+}
+
+.footer-left p {
+  margin-top: 8px;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+.footer-center h3,
+.footer-right h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #ffcc00;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin-bottom: 8px;
+}
+
+.footer-center ul li a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+  color: #ffcc00;
+  opacity: 1;
+}
+
+.footer-right a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer-right .socials {
+  margin-top: 10px;
+}
+
+.footer-right .socials a {
+  color: white;
+  margin-right: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-right .socials a:hover {
+  color: #ffcc00;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  opacity: 0.8;
+}
